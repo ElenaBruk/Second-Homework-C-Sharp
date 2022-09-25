@@ -4,8 +4,12 @@ int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 if (number > 99)
 {
     while (number > 999)
-        Console.WriteLine("Третья цифра заданного числа: " + number / 10 % 10);
+    {
+        number = number/10;
+    }
+    Console.WriteLine("Третья цифра заданного числа: " + number % 10);
 }
+
 else
 {
     Console.WriteLine("В данном числе нет третьей цифры");
